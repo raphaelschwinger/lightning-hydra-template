@@ -144,15 +144,11 @@ The directory structure of new project looks like this:
 git clone https://github.com/ashleve/lightning-hydra-template
 cd lightning-hydra-template
 
-# [OPTIONAL] create conda environment
-conda create -n myenv python=3.9
-conda activate myenv
+# install dependencies with poetry
+poetry install
 
-# install pytorch according to instructions
-# https://pytorch.org/get-started/
-
-# install requirements
-pip install -r requirements.txt
+# activate virtual environment
+eval $(poetry env activate)
 ```
 
 Template contains example with MNIST classification.<br>
