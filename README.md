@@ -85,6 +85,7 @@ The directory structure of new project looks like this:
 
 ```
 ├── .github                   <- Github Actions workflows
+├── .devcontainer             <- Devcontainer for VSCode
 │
 ├── configs                   <- Hydra configs
 │   ├── callbacks                <- Callbacks configs
@@ -129,8 +130,8 @@ The directory structure of new project looks like this:
 ├── .project-root             <- File for inferring the position of project root directory
 ├── environment.yaml          <- File for installing conda environment
 ├── Makefile                  <- Makefile with commands like `make train` or `make test`
-├── pyproject.toml            <- Configuration options for testing and linting
-├── requirements.txt          <- File for installing python dependencies
+├── pyproject.toml            <- Dependencies & Configuration options for testing and linting
+|── poetry.lock               <- Lock file for poetry
 ├── setup.py                  <- File for installing project as a package
 └── README.md
 ```
@@ -143,6 +144,11 @@ The directory structure of new project looks like this:
 # clone project
 git clone https://github.com/ashleve/lightning-hydra-template
 cd lightning-hydra-template
+
+# optional: add devcontainer for VSCode from git submodule
+git submodule update --init --recursive
+# optimal activate devcontainer in VSCode 'Remote-Containers: Reopen in Container'
+
 
 # install dependencies with poetry
 poetry install
